@@ -1,585 +1,1358 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  <meta name="description" content="Srikanth Shanmugam — physicist in the making, computational scientist, and engineer exploring physics, quantum information, AI/ML, mathematics, and space systems.">
-  <meta property="og:title" content="Srikanth Shanmugam — Physics, Computation & Engineering">
-  <meta property="og:description" content="Exploring the physical world through mathematics, computation, and engineering.">
-  <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Srikanth Shanmugam | Physics · Computation · Engineering</title>
+    <title>Srikanth Shanmugam | AI • Quantum • Scientific Computing • Physics</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <meta
+        name="description"
+        content="Research portfolio of Srikanth Shanmugam — Artificial Intelligence, Quantum Information Science,Scientific Computing and Physics."
+    >
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <script>
-    try {
-      const savedTheme = localStorage.getItem("srikanth-theme");
-      document.documentElement.dataset.theme =
-        savedTheme ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light");
-    } catch {
-      document.documentElement.dataset.theme = "light";
-    }
-  </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
 
-  <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="nav-shell">
-      <a class="wordmark" href="#home" aria-label="Srikanth Shanmugam home">
-        SS<span>.</span>
-      </a>
+<header class="navbar">
 
-      <nav class="primary-nav" aria-label="Main navigation">
+    <a href="#home" class="nav-brand">
+        <span class="brand-mark">SS</span>
+        <span class="brand-name">Srikanth Shanmugam</span>
+    </a>
+
+    <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#toolkit">Toolkit</a>
         <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="nav-actions">
-        <a class="nav-cv" href="Srikanth_Shanmugam_CV.pdf" target="_blank" rel="noopener">
-          CV <span aria-hidden="true">↗</span>
-        </a>
-
-        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
-          <span id="themeIcon" aria-hidden="true">◐</span>
-          <span class="theme-label">Theme</span>
-        </button>
-
-        <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-
-    <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation" hidden>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#toolkit">Toolkit</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-      <a href="Srikanth_Shanmugam_CV.pdf" target="_blank" rel="noopener">Curriculum vitae ↗</a>
     </nav>
-  </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">
-          <span class="status-dot"></span>
-          PHYSICS · COMPUTATION · ENGINEERING
-        </p>
+    <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Switch to dark theme"
+        title="Switch to technical dark theme"
+    >
+        <span id="themeIcon">☾</span>
+        <span id="themeText">DARK</span>
+    </button>
 
-        <h1 id="hero-title">
-          Intelligence across<br>
-          <em>machines &amp; matter.</em>
+</header>
+
+
+<main>
+
+<!-- =========================================================
+     HOME
+========================================================= -->
+
+<section id="home" class="hero section">
+
+    <div class="hero-content reveal">
+
+        <div class="hero-status">
+            <span class="status-dot"></span>
+            AI · Quantum · Scientific Computing · Physics
+        </div>
+
+        <p class="eyebrow">Research </p>
+
+        <h1>
+            Srikanth <span>Shanmugam</span>
         </h1>
 
-        <p class="hero-lede">
-          I want to understand the physical world through
-          <strong>physics, mathematics, and computation</strong>—and use
-          engineering to turn ideas into working systems.
+        <p class="hero-description">
+            Electronics & Instrumentation Engineering graduate exploring
+            Artificial Intelligence, Quantum Information Science,
+            Scientific Computing, and physics.
         </p>
 
-        <p class="hero-detail">
-          I'm Srikanth Shanmugam, an Electronics and Instrumentation Engineering
-          graduate building toward a future in physics research. My interests
-          span quantum information, scientific AI, computational methods,
-          electronics, and space systems.
-        </p>
+        <div class="interest-line">
+            Artificial Intelligence & Machine Learning
+            <span>•</span>
+            Quantum Information Science
+            <span>•</span>
+            Scientific Computing 
+             <span>•</span>
+            Physics
+        </div>
 
         <div class="hero-actions">
-          <a class="button button-primary" href="#research">
-            Explore research <span aria-hidden="true">↓</span>
-          </a>
-          <a class="button button-secondary" href="#projects">Selected projects</a>
-          <a class="text-link" href="Srikanth_Shanmugam_CV.pdf" target="_blank" rel="noopener">
-            View CV ↗
-          </a>
-        </div>
-
-        <p class="hero-note">Curious by nature. Research-focused by intention.</p>
-      </div>
-
-      <div class="hero-visual reveal" aria-label="Abstract illustration of physical systems and computation">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="orbit orbit-three"></div>
-
-        <div class="visual-core">
-          <span>φ</span>
-          <small>PHYSICS<br>× COMPUTATION</small>
-        </div>
-
-        <span class="orbit-label label-top">MATHEMATICS</span>
-        <span class="orbit-label label-right">QUANTUM</span>
-        <span class="orbit-label label-bottom">ENGINEERING</span>
-        <span class="orbit-label label-left">AI / ML</span>
-
-        <span class="visual-cross cross-a">+</span>
-        <span class="visual-cross cross-b">×</span>
-        <span class="visual-cross cross-c">·</span>
-      </div>
-
-      <div class="hero-meta">
-        <span>BASED IN INDIA</span>
-        <span class="meta-line"></span>
-        <span>INDEPENDENT PROJECTS &amp; RESEARCH EXPERIENCE</span>
-      </div>
-    </section>
-
-    <!-- RESEARCH OUTLOOK -->
-    <section class="intro-band" aria-label="Research outlook">
-      <div class="section-wrap intro-band-inner">
-        <p class="eyebrow">A WORKING PHILOSOPHY</p>
-        <p class="band-statement">
-          Physics is my destination.
-          <span>Mathematics gives me language, computation gives me leverage,
-          and engineering keeps me close to reality.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section-wrap section-block" id="about" aria-labelledby="about-title">
-      <div class="section-heading reveal">
-        <p class="eyebrow">01 / ABOUT</p>
-        <h2 id="about-title">
-          One scientific world.<br>
-          <em>Many ways to explore it.</em>
-        </h2>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-main reveal">
-          <p class="large-copy">
-            My long-term ambition is to become a <strong>physics researcher</strong>.
-            I'm especially drawn to questions where physical principles,
-            mathematical structure, and computational experiments meet.
-          </p>
-
-          <p>
-            My undergraduate training in Electronics and Instrumentation
-            Engineering gave me an engineering perspective on measurement,
-            electronics, sensors, and integrated systems. Outside that
-            foundation, I have pursued projects in quantum error correction,
-            quantum noise modeling, machine learning, and scientific data analysis.
-          </p>
-
-          <p>
-            I also enjoy exploring biology, chemistry, ecology, and other fields
-            where computation can help make sense of complex systems. I see
-            breadth as a source of questions; focused research is how I hope
-            to answer them.
-          </p>
-        </div>
-
-        <aside class="about-aside reveal">
-          <div class="aside-mark">“</div>
-          <p>
-            I don't want to choose between understanding nature and building
-            tools. I want to learn enough of both to do meaningful science.
-          </p>
-          <span class="mono-label">PERSONAL RESEARCH OUTLOOK</span>
-        </aside>
-      </div>
-    </section>
-
-    <!-- RESEARCH DIRECTIONS -->
-    <section class="research-section" id="research" aria-labelledby="research-title">
-      <div class="section-wrap section-block">
-        <div class="section-heading reveal">
-          <p class="eyebrow">02 / RESEARCH DIRECTIONS</p>
-          <h2 id="research-title">
-            Questions that pull<br>
-            <em>me forward.</em>
-          </h2>
-          <p class="section-intro">
-            These are evolving interests, not claims of expertise in every area.
-            I hope to sharpen them through deeper study, research collaboration,
-            and reproducible work.
-          </p>
-        </div>
-
-        <div class="research-grid">
-          <article class="research-card reveal">
-            <span class="card-index">A / 01</span>
-            <div class="research-symbol symbol-physics">∇²</div>
-            <h3>Physics &amp; mathematics</h3>
-            <p>
-              Quantum mechanics, electromagnetism, thermodynamics, astrophysics,
-              and the mathematical tools used to describe physical systems.
-            </p>
-            <div class="chip-row">
-              <span>Physical theory</span>
-              <span>Linear algebra</span>
-              <span>Differential equations</span>
-            </div>
-          </article>
-
-          <article class="research-card reveal">
-            <span class="card-index">A / 02</span>
-            <div class="research-symbol symbol-quantum">|ψ⟩</div>
-            <h3>Quantum information</h3>
-            <p>
-              Quantum error correction, quantum noise and channels, quantum
-              communication, and computational approaches to reliable quantum systems.
-            </p>
-            <div class="chip-row">
-              <span>QEC</span>
-              <span>Noise models</span>
-              <span>Quantum algorithms</span>
-            </div>
-          </article>
-
-          <article class="research-card reveal">
-            <span class="card-index">A / 03</span>
-            <div class="research-symbol symbol-ai">ƒ(x)</div>
-            <h3>AI &amp; scientific computing</h3>
-            <p>
-              Machine learning, numerical experiments, data-driven modeling,
-              and algorithms that support investigation across scientific domains.
-            </p>
-            <div class="chip-row">
-              <span>ML / DL</span>
-              <span>Simulation</span>
-              <span>Scientific data</span>
-            </div>
-          </article>
-
-          <article class="research-card reveal">
-            <span class="card-index">A / 04</span>
-            <div class="research-symbol symbol-engineering">⌁</div>
-            <h3>Electronics &amp; space systems</h3>
-            <p>
-              Instrumentation, sensing, embedded systems, satellites, and the
-              engineering foundations behind complex aerospace systems.
-            </p>
-            <div class="chip-row">
-              <span>Electronics</span>
-              <span>Embedded systems</span>
-              <span>Space technology</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section-wrap section-block" id="projects" aria-labelledby="projects-title">
-      <div class="section-heading section-heading-row reveal">
-        <div>
-          <p class="eyebrow">03 / SELECTED WORK</p>
-          <h2 id="projects-title">
-            Projects as a way<br>
-            <em>of asking questions.</em>
-          </h2>
-        </div>
-        <p class="section-intro">
-          A selection of computational, AI, and engineering projects. Each
-          project page should document the question, method, evidence, and
-          limitations—not just the tools used.
-        </p>
-      </div>
-
-      <div class="project-list">
-        <article class="project-row reveal">
-          <div class="project-number">01</div>
-          <div class="project-body">
-            <div class="project-topline">
-              <span class="project-type">QUANTUM INFORMATION</span>
-              <span class="project-year">SIMULATION PROJECT</span>
-            </div>
-            <h3>Quantum Error Correction for Deep-Space Communication</h3>
-            <p>
-              Explores quantum error-correction concepts for communication under
-              modeled noise and decoherence. The work provides a starting point
-              for investigating how encoded quantum information behaves under
-              different channel assumptions.
-            </p>
-            <div class="tag-list">
-              <span>Python</span><span>Qiskit</span><span>NumPy</span><span>Noise modeling</span>
-            </div>
-            <a class="project-link" href="https://github.com/srikth/-Quantum-Error-Correction-for-Deep-Space-Communication" target="_blank" rel="noopener">
-              View repository <span>↗</span>
+            <a href="#research" class="btn btn-primary">
+                Explore Research <span>↗</span>
             </a>
-          </div>
-          <div class="project-aside">
-            <span class="mini-equation">ρ → 𝓔(ρ)</span>
-            <span class="aside-caption">Quantum channels<br>&amp; encoded states</span>
-          </div>
-        </article>
 
-        <article class="project-row reveal">
-          <div class="project-number">02</div>
-          <div class="project-body">
-            <div class="project-topline">
-              <span class="project-type">QUANTUM / MACHINE LEARNING</span>
-              <span class="project-year">MODEL EXPLORATION</span>
-            </div>
-            <h3>Quantum Noise Parameter Learning</h3>
-            <p>
-              Investigates learning parameters associated with modeled quantum
-              noise using quantum-channel concepts and machine-learning methods.
-              The project can be strengthened with explicit baselines,
-              parameter-recovery error, and reproducible training curves.
-            </p>
-            <div class="tag-list">
-              <span>Python</span><span>Qiskit</span><span>PyTorch</span><span>Kraus operators</span>
-            </div>
-            <a class="project-link" href="https://github.com/srikth/Quantum-Error-Correction-Simulaton-using-Qiskit" target="_blank" rel="noopener">
-              View related repository <span>↗</span>
+            <a href="#contact" class="btn btn-secondary">
+                Contact Me
             </a>
-          </div>
-          <div class="project-aside">
-            <span class="mini-equation">𝓔(ρ; θ)</span>
-            <span class="aside-caption">Modeling a channel<br>with parameters θ</span>
-          </div>
-        </article>
+        </div>
 
-        <article class="project-row reveal">
-          <div class="project-number">03</div>
-          <div class="project-body">
-            <div class="project-topline">
-              <span class="project-type">SCIENTIFIC MACHINE LEARNING</span>
-              <span class="project-year">COMPUTER VISION</span>
+        <div class="hero-meta">
+
+            <div>
+                <span class="meta-label">FOCUS</span>
+                <span>AI / ML / QIS / Physics</span>
             </div>
-            <h3>CNN Galaxy Morphology Classification</h3>
-            <p>
-              Uses convolutional neural networks to explore image-based
-              classification in astronomy. A strong case study should document
-              the dataset, class balance, train/validation/test split, metrics,
-              and examples of model errors.
-            </p>
-            <div class="tag-list">
-              <span>Python</span><span>CNN</span><span>Computer vision</span><span>Astronomy data</span>
+
+            <div>
+                <span class="meta-label">BACKGROUND</span>
+                <span>Electronics & Instrumentation</span>
             </div>
-            <a class="project-link" href="https://github.com/srikth" target="_blank" rel="noopener">
-              Explore GitHub projects <span>↗</span>
-            </a>
-          </div>
-          <div class="project-aside">
-            <span class="mini-equation">image → class</span>
-            <span class="aside-caption">Learning patterns<br>from scientific images</span>
-          </div>
-        </article>
 
-        <article class="project-row reveal">
-          <div class="project-number">04</div>
-          <div class="project-body">
-            <div class="project-topline">
-              <span class="project-type">ELECTRONICS / EMBEDDED SYSTEMS</span>
-              <span class="project-year">ENGINEERING PROJECT</span>
+            <div>
+                <span class="meta-label">LOCATION</span>
+                <span>India</span>
             </div>
-            <h3>Smart Weather Station &amp; Sensor Fusion</h3>
-            <p>
-              An embedded environmental-monitoring project involving sensor
-              acquisition and connected visualization. This work represents
-              the measurement-and-systems side of my engineering background.
-            </p>
-            <div class="tag-list">
-              <span>ESP32</span><span>Sensors</span><span>Time series</span><span>IoT</span>
-            </div>
-            <a class="project-link" href="https://github.com/srikth" target="_blank" rel="noopener">
-              Explore GitHub projects <span>↗</span>
-            </a>
-          </div>
-          <div class="project-aside">
-            <span class="mini-equation">sensor → data</span>
-            <span class="aside-caption">Measurement<br>&amp; interpretation</span>
-          </div>
-        </article>
-      </div>
 
-      <p class="integrity-note">
-        <strong>Research note:</strong> Descriptions are intentionally cautious.
-        Add quantitative results, figures, collaborators, and publication details
-        only when you can verify them from your actual project work.
-      </p>
-
-      <div class="more-projects reveal">
-        <span class="mono-label">MORE EXPLORATIONS</span>
-        <p>
-          Facial emotion recognition · Protein structure prediction · Species
-          distribution modeling · AI radar control · Autonomous grass mower
-        </p>
-        <a class="text-link" href="https://github.com/srikth" target="_blank" rel="noopener">
-          Browse all repositories ↗
-        </a>
-      </div>
-    </section>
-
-    <!-- TOOLKIT -->
-    <section class="toolkit-section" id="toolkit" aria-labelledby="toolkit-title">
-      <div class="section-wrap section-block">
-        <div class="section-heading reveal">
-          <p class="eyebrow">04 / METHODS &amp; TOOLS</p>
-          <h2 id="toolkit-title">
-            Tools in service<br>
-            <em>of the question.</em>
-          </h2>
         </div>
 
-        <div class="toolkit-grid">
-          <div class="toolkit-item reveal">
-            <span class="toolkit-index">01</span>
-            <h3>Programming &amp; data</h3>
-            <p>Python · C/C++ · NumPy · Pandas · Matplotlib · Jupyter</p>
-          </div>
-
-          <div class="toolkit-item reveal">
-            <span class="toolkit-index">02</span>
-            <h3>AI &amp; machine learning</h3>
-            <p>PyTorch · TensorFlow · scikit-learn · CNNs · Computer vision</p>
-          </div>
-
-          <div class="toolkit-item reveal">
-            <span class="toolkit-index">03</span>
-            <h3>Quantum computing</h3>
-            <p>Qiskit · Cirq · PennyLane · Quantum circuits · Noise simulation</p>
-          </div>
-
-          <div class="toolkit-item reveal">
-            <span class="toolkit-index">04</span>
-            <h3>Engineering systems</h3>
-            <p>Electronics · Instrumentation · ESP32 · Sensors · Embedded systems</p>
-          </div>
-
-          <div class="toolkit-item reveal">
-            <span class="toolkit-index">05</span>
-            <h3>Mathematical foundations</h3>
-            <p>Calculus · Linear algebra · Probability · Complex analysis · Numerical methods</p>
-          </div>
-
-          <div class="toolkit-item reveal">
-            <span class="toolkit-index">06</span>
-            <h3>Research workflow</h3>
-            <p>Git · GitHub · Technical writing · Visualization · Reproducible experiments</p>
-          </div>
-        </div>
-
-        <p class="integrity-note">
-          This is a skills overview, not a proficiency ranking. Keep only tools
-          and topics you can discuss confidently, and indicate depth through
-          the projects where you used them.
-        </p>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section class="section-wrap section-block" id="education" aria-labelledby="education-title">
-      <div class="section-heading reveal">
-        <p class="eyebrow">05 / EDUCATION</p>
-        <h2 id="education-title">
-          Engineering foundation.<br>
-          <em>Physics-oriented future.</em>
-        </h2>
-      </div>
-
-      <div class="education-card reveal">
-        <div class="education-date">2022 — 2026</div>
-
-        <div class="education-content">
-          <h3>B.Tech, Electronics and Instrumentation Engineering</h3>
-          <p class="education-school">
-            SRM Institute of Science and Technology · Kattankulathur, India
-          </p>
-          <p>GPA: 7.70 / 10</p>
-          <p>
-            Relevant foundations include electronics and instrumentation,
-            programming, AI/data science, image processing, calculus and linear
-            algebra, probability, and undergraduate physics topics including
-            quantum mechanics, electromagnetism, and thermodynamics.
-          </p>
-          <span class="education-note">
-            Degree and course details should match your official transcript and certificates.
-          </span>
-        </div>
-      </div>
-
-      <div class="future-note reveal">
-        <span class="mono-label">WHAT COMES NEXT</span>
-        <p>
-          Build deeper foundations in physics and mathematics, pursue research
-          experiences, and identify doctoral programs whose expectations align
-          with my preparation and evolving research questions.
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="section-wrap contact-inner">
-        <div class="reveal">
-          <p class="eyebrow">06 / CONTACT</p>
-          <h2 id="contact-title">
-            Good science begins<br>
-            <em>with a question.</em>
-          </h2>
-          <p class="contact-copy">
-            I'm interested in research conversations, collaboration, and
-            opportunities to grow as a computational scientist and future physicist.
-          </p>
-        </div>
-
-        <div class="contact-links reveal">
-          <!-- Replace the placeholder email before publishing. -->
-          <a class="contact-link" href="mailto:YOUR_EMAIL@example.com">
-            <span>Email</span>
-            <strong>YOUR_EMAIL@example.com</strong>
-            <span aria-hidden="true">↗</span>
-          </a>
-
-          <a class="contact-link" href="https://github.com/srikth" target="_blank" rel="noopener">
-            <span>GitHub</span>
-            <strong>github.com/srikth</strong>
-            <span aria-hidden="true">↗</span>
-          </a>
-
-          <!-- Replace this URL with your own LinkedIn profile. -->
-          <a class="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noopener">
-            <span>LinkedIn</span>
-            <strong>Professional profile</strong>
-            <span aria-hidden="true">↗</span>
-          </a>
-
-          <a class="contact-link" href="Srikanth_Shanmugam_CV.pdf" target="_blank" rel="noopener">
-            <span>Curriculum vitae</span>
-            <strong>View PDF</strong>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="section-wrap footer-inner">
-      <a class="wordmark" href="#home">SS<span>.</span></a>
-      <p>Built around curiosity, evidence, and the physical world.</p>
-      <span class="footer-copy">© <span id="year"></span> Srikanth Shanmugam</span>
-      <a class="back-top" href="#home">Back to top ↑</a>
     </div>
-  </footer>
+
+
+    <div class="hero-photo-area reveal">
+
+        <div class="photo-orbit orbit-one"></div>
+        <div class="photo-orbit orbit-two"></div>
+
+        <div class="photo-frame">
+            <img
+                src="srikanth.jpg"
+                alt="Srikanth Shanmugam"
+            >
+        </div>
+
+        <div class="photo-caption">
+            <span>RESEARCHER</span>
+            <span>AI × QIS x Physics</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about" class="section">
+
+    <div class="section-heading reveal">
+
+        <p class="eyebrow">ABOUT</p>
+
+        <h2>
+            From engineering and intelligent systems toward deeper study of physics.
+        </h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-text reveal">
+
+            <p>
+                I am an Electronics & Instrumentation Engineering graduate with a longstanding interest in physics, exploring the intersection of artificial intelligence, machine learning, quantum information science, and scientific computing.
+
+            </p>
+
+            <p>
+                My interest in physics began during my school education, where I studied physics throughout my secondary and higher-secondary years. During my undergraduate studies in Electronics and Instrumentation Engineering, that interest continued alongside my growing interest in Artificial Intelligence, Machine Learning, and Quantum Computing. Through my engineering projects and research experiences, I have explored areas including deep learning, computer vision, scientific data analysis, quantum computing, quantum error correction, and quantum machine learning.
+            </p>
+
+            <p>
+                I am now interested in bringing these interests together  Physics, Artificial Intelligence, and Quantum Information Science while developing a deeper academic foundation in physics and exploring how modern computational and quantum approaches can be applied to scientific problems.
+            </p>
+
+        </div>
+
+
+        <div class="about-facts reveal">
+
+            <div class="fact-card interactive-card">
+                <span>01</span>
+                <strong>AI / ML</strong>
+                <p>
+                    Deep learning, computer vision, Gen AI, reinforcement learning, multimodal AI,
+                    scientific AI
+                </p>
+            </div>
+
+            <div class="fact-card interactive-card">
+                <span>02</span>
+                <strong>Quantum</strong>
+                <p>
+                    QIS, QML, QEC, Quantum computing, Quantum communication and quantum sensing
+                </p>
+            </div>
+
+            <div class="fact-card interactive-card">
+                <span>03</span>
+                <strong>Scientific Computing</strong>
+                <p>
+                    Scientific data analysis, simulation, computational methods, and AI-driven approaches to scientific problems.
+                </p>
+            </div>
+
+            <div class="fact-card interactive-card">
+                <span>04</span>
+                <strong>Intelligent & space  Systems</strong>
+                <p>
+                    IoT, embedded systems, instrumentation, sensor data analytics, intelligent sensing, space systems, astrodynamics, rocket propulsion, space-environment thermodynamics, and GNC.
+                </p>
+            </div>
+          <div class="fact-card interactive-card">
+                <span>04</span>
+                <strong>Physics</strong>
+                <p>
+                   Quantum mechanics, electromagnetism, thermodynamics, relativity, atomic and nuclear physics, astrophysics, and cosmology.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RESEARCH
+     DARK MODE IMAGE ONLY
+========================================================= -->
+
+<section
+    id="research"
+    class="section research-section image-section"
+>
+
+    <img
+        class="section-bg quantum-section-bg"
+        src="quantum.png"
+        alt=""
+        aria-hidden="true"
+    >
+
+    <img
+        class="section-bg galaxy-section-bg"
+        src="galaxy.png"
+        alt=""
+        aria-hidden="true"
+    >
+
+
+    <div class="section-heading reveal">
+
+        <p class="eyebrow">RESEARCH INTERESTS</p>
+
+        <h2>
+            Exploring intelligence, quantum science, scientific systems, and physics across disciplines.
+        </h2>
+
+    </div>
+
+
+    <div class="research-grid">
+
+        <article class="research-card interactive-card reveal">
+
+            <div class="research-icon">AI</div>
+
+            <h3>Artificial Intelligence & ML</h3>
+
+            <p>
+                Deep learning, self-supervised learning,
+                reinforcement learning, multimodal AI, generative AI
+                , Scientific AI and physics-informed
+                machine learning.
+            </p>
+
+            <div class="tags">
+                <span>SSL</span>
+                <span>DRL</span>
+                <span>GANs</span>
+                <span>GNNs</span>
+                <span>GenAI</span>
+            </div>
+
+        </article>
+
+
+        <article class="research-card interactive-card reveal">
+
+            <div class="research-icon">CV</div>
+
+            <h3>Computer Vision</h3>
+
+            <p>
+                Visual learning, image understanding, scientific computer vision, astronomical imaging, ecological applications, remote sensing, and real-world intelligent sensing.
+            </p>
+
+            <div class="tags">
+                <span>CNN</span>
+                <span>OpenCV</span>
+                <span>Vision Transformers</span>
+                <span>Grad-CAM</span>
+            </div>
+
+        </article>
+
+
+        <article class="research-card interactive-card reveal">
+
+            <div class="research-icon">Q</div>
+
+            <h3>Quantum Information Science</h3>
+
+            <p>
+                Quantum computing and simulation, quantum machine learning, quantum error correction, quantum noise and channels, Kraus operators, quantum communication and networking, quantum sensing, and quantum information theory.
+            </p>
+
+            <div class="tags">
+                <span>QEC</span>
+                <span>QML</span>
+                <span>Qiskit</span>
+                <span>Cirq</span>
+                <span>Pennylane</span>
+            </div>
+
+        </article>
+
+
+        <article class="research-card interactive-card reveal">
+
+            <div class="research-icon">SC</div>
+
+            <h3>Scientific Computing</h3>
+
+            <p>
+                Scientific data analysis, simulation, numerical and computational methods, and data-driven approaches to complex scientific systems across physics, astronomy, biology, environmental science, and other scientific domains.
+            </p>
+
+            <div class="tags">
+                <span>Simulation</span>
+                <span>Physics</span>
+                <span>Scientific Data</span>
+                <span>Modeling</span>
+            </div>
+
+        </article>
+
+
+        <article class="research-card interactive-card reveal">
+
+            <div class="research-icon">IS</div>
+
+            <h3>Intelligent & Space systems</h3>
+
+            <p>
+               IoT, embedded systems, instrumentation, sensor data analytics, intelligent communication systems, autonomous systems, astrodynamics and orbital motion, rocket propulsion, space-environment thermodynamics, GNC and space systems.
+            </p>
+            <div class="tags">
+                <span>IoT</span>
+                <span>Edge AI</span>
+                <span>ESP32</span>
+                <span>Sensors</span>
+                <span>GNC</span>
+            </div>
+
+        </article>
+
+         <article class="research-card interactive-card reveal">
+
+            <div class="research-icon">P</div>
+
+            <h3>Physics</h3>
+
+            <p>
+               A growing academic interest in the foundations and applications of physics, including quantum mechanics, electromagnetism, thermodynamics, relativity, atomic physics, nuclear physics, particle physics, astrophysics, and cosmology.
+                 </p>
+            <div class="tags">
+                <span>Electromagnetism</span>
+                <span>Relativity</span>
+                <span>Quantum Mechanics</span>
+                <span>Thermodynamics</span>
+                <span>Astrophysics</span>
+            </div>
+
+        </article>
+
+        <article class="research-card interactive-card reveal">
+
+            <div class="research-icon">N</div>
+
+            <h3>Emerging AI Systems</h3>
+
+            <p>
+                Neural machine translation, SLAM,
+                geometric deep learning, graph neural networks, neuro-symbolic
+                systems, TinyML and modern generative AI.
+            </p>
+
+            <div class="tags">
+                <span>NMT</span>
+                <span>SLAM</span>
+                <span>TinyML</span>
+                <span>GenAI</span>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE
+     NO SCIENTIFIC IMAGE
+========================================================= -->
+
+<section id="experience" class="section">
+
+    <div class="section-heading reveal">
+
+        <p class="eyebrow">EXPERIENCE</p>
+
+        <h2>
+            Leadership, coordination and
+            academic engagement.
+        </h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <article class="timeline-item reveal">
+
+            <div class="timeline-logo">
+                <img
+                    src="srm logo.jpg"
+                    alt="SRM Institute of Science and Technology"
+                >
+            </div>
+
+            <div class="timeline-content interactive-card">
+
+                <div class="timeline-top">
+                    <span class="timeline-date">
+                        2024 — 2026
+                    </span>
+
+                    <span class="timeline-type">
+                        LEADERSHIP
+                    </span>
+                </div>
+
+                <h3>Class Representative</h3>
+
+                <h4>
+                    SRM Institute of Science and Technology
+                </h4>
+
+                <p>
+                    Represented approximately 60 students while
+                    coordinating communication between students,
+                    faculty and department administration.
+                </p>
+
+                <ul>
+                    <li>
+                        Coordinated academic communication
+                        and student concerns.
+                    </li>
+
+                    <li>
+                        Supported faculty-student coordination.
+                    </li>
+
+                    <li>
+                        Helped organize departmental
+                        academic activities.
+                    </li>
+                </ul>
+
+            </div>
+
+        </article>
+
+
+        <article class="timeline-item reveal">
+
+            <div class="timeline-logo">
+                <img
+                    src="srm logo.jpg"
+                    alt="SRM Institute of Science and Technology"
+                >
+            </div>
+
+            <div class="timeline-content interactive-card">
+
+                <div class="timeline-top">
+                    <span class="timeline-date">
+                        2024 — 2026
+                    </span>
+
+                    <span class="timeline-type">
+                        TECHNICAL EVENT
+                    </span>
+                </div>
+
+                <h3>
+                    Department Expo & Technical Coordination
+                </h3>
+
+                <h4>
+                    SRM Institute of Science and Technology
+                </h4>
+
+                <p>
+                    Contributed to departmental technical
+                    activities and coordination involving
+                    more than 50 students.
+                </p>
+
+                <ul>
+                    <li>
+                        Supported event planning
+                        and coordination.
+                    </li>
+
+                    <li>
+                        Worked with students on
+                        technical demonstrations.
+                    </li>
+
+                    <li>
+                        Helped communicate requirements
+                        between teams and faculty.
+                    </li>
+                </ul>
+
+            </div>
+
+        </article>
+         <article class="timeline-item reveal">
+
+            <div class="timeline-logo">
+                <img
+                    src="srm logo.jpg"
+                    alt="SRM Institute of Science and Technology"
+                >
+            </div>
+
+            <div class="timeline-content interactive-card">
+
+                <div class="timeline-top">
+                    <span class="timeline-date">
+                        2023 — 2026
+                    </span>
+
+                    <span class="timeline-type">
+                        Undergraduate Research
+                    </span>
+                </div>
+
+                <h3>
+                    Student Researcher
+                </h3>
+
+                <h4>
+                    SRM Institute of Science and Technology
+                </h4>
+
+                <p>
+                    Conducted interdisciplinary research across AI/ML, computer vision, quantum computing, and scientific computing.
+                </p>
+
+                <ul>
+                    <li>
+                       Developed and evaluated computational models using Python, PyTorch, TensorFlow, Qiskit, NumPy, and OpenCV.
+                    </li>
+
+                    <li>
+                       Explored quantum error correction, quantum noise modeling, Kraus operators, quantum communication, and scientific AI applications.
+                    </li>
+
+                    <li>
+                        Conducted literature reviews, computational experiments, model evaluation, and technical research presentations in collaboration with faculty and research groups.
+                    </li>
+                </ul>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section id="projects" class="section projects-section">
+
+    <div class="section-heading reveal">
+
+        <p class="eyebrow">SELECTED PROJECTS</p>
+
+        <h2>
+            From quantum communication
+            to scientific vision.
+        </h2>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+        <article class="project-card featured-project interactive-card reveal">
+
+            <div class="project-number">01</div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    QUANTUM COMMUNICATION
+                </span>
+
+                <h3>
+                    Quantum Error Correction
+                    for Deep Space Communication
+                </h3>
+
+                <p>
+                    Explored 3-qubit and 7-qubit
+                    quantum error-correction approaches
+                    for mitigating noise and decoherence
+                    in deep-space communication scenarios.
+                </p>
+
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Qiskit</span>
+                    <span>NumPy</span>
+                    <span>QEC</span>
+                </div>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/srikth/-Quantum-Error-Correction-for-Deep-Space-Communication"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View Project ↗
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="project-card interactive-card reveal">
+
+            <div class="project-number">02</div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    QUANTUM MACHINE LEARNING
+                </span>
+
+                <h3>
+                    Quantum Noise Parameter Learning
+                </h3>
+
+                <p>
+                    Investigated quantum noise using
+                    Kraus operators, density matrices
+                    and neural-network-based parameter learning.
+                </p>
+
+                <div class="tags">
+                    <span>Qiskit</span>
+                    <span>PyTorch</span>
+                    <span>Kraus</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="project-card interactive-card reveal">
+
+            <div class="project-number">03</div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    ASTRONOMICAL AI
+                </span>
+
+                <h3>
+                    CNN Galaxy Morphology Classification
+                </h3>
+
+                <p>
+                    Applied convolutional neural networks
+                    to classify astronomical galaxy morphology
+                    from image data.
+                </p>
+
+                <div class="tags">
+                    <span>Python</span>
+                    <span>CNN</span>
+                    <span>Computer Vision</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="project-card interactive-card reveal">
+
+            <div class="project-number">04</div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    BIOINFORMATICS
+                </span>
+
+                <h3>
+                    Protein Structure Prediction
+                </h3>
+
+                <p>
+                    Explored deep learning approaches
+                    for protein structure-related prediction
+                    using biological sequence data.
+                </p>
+
+                <div class="tags">
+                    <span>Deep Learning</span>
+                    <span>Python</span>
+                    <span>CB513</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="project-card interactive-card reveal">
+
+            <div class="project-number">05</div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    ECOLOGICAL AI
+                </span>
+
+                <h3>
+                    Species Distribution Modeling
+                </h3>
+
+                <p>
+                    Investigated machine-learning approaches
+                    for modeling species distributions using
+                    environmental and geographic variables.
+                </p>
+
+                <div class="tags">
+                    <span>ML</span>
+                    <span>Ecology</span>
+                    <span>Data Science</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="project-card interactive-card reveal">
+
+            <div class="project-number">06</div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    COMPUTER VISION
+                </span>
+
+                <h3>
+                    FER2013 Emotion Classification
+                </h3>
+
+                <p>
+                    Developed a CNN-based facial emotion
+                    recognition model and used Grad-CAM
+                    for visual interpretation.
+                </p>
+
+                <div class="tags">
+                    <span>CNN</span>
+                    <span>OpenCV</span>
+                    <span>Grad-CAM</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="project-card interactive-card reveal">
+
+            <div class="project-number">07</div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    IOT / EMBEDDED
+                </span>
+
+                <h3>
+                    Smart Weather Station
+                </h3>
+
+                <p>
+                    Built an ESP32-based environmental
+                    monitoring system with sensor acquisition
+                    and cloud-connected visualization.
+                </p>
+
+                <div class="tags">
+                    <span>ESP32</span>
+                    <span>Blynk</span>
+                    <span>Sensors</span>
+                </div>
+
+            </div>
+
+        </article>
+          <article class="project-card interactive-card reveal">
+
+            <div class="project-number">08</div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    PHYSICS COURSEWORK
+                </span>
+
+                <h3>
+                    Electromagnetism
+                </h3>
+
+                <p>
+                    Completed undergraduate coursework and introductory project work exploring fundamental concepts of electric and magnetic fields, electromagnetic phenomena, and their applications to physical and engineering systems.
+                </p>
+
+                <div class="tags">
+                    <span>Electromagnetism</span>
+                    <span>Electric Fields</span>
+                    <span>Magnetic Fields</span>
+                </div>
+
+            </div>
+
+        </article>
+
+           <article class="project-card interactive-card reveal">
+
+            <div class="project-number">09</div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    PHYSICS COURSEWORK
+                </span>
+
+                <h3>
+                   Thermodynamics
+                </h3>
+
+                <p>
+                    Completed undergraduate coursework and introductory project work exploring heat, work, energy, thermodynamic systems, and fundamental thermodynamic processes.
+                </p>
+
+                <div class="tags">
+                    <span>Energy</span>
+                    <span>Heat</span>
+                    <span>Physical Systems</span>
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="project-card interactive-card reveal">
+
+            <div class="project-number">10</div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    INTELLIGENT SYSTEMS
+                </span>
+
+                <h3>
+                    AI Radar Control
+                </h3>
+
+                <p>
+                    Explored intelligent sensing and
+                    automated radar-control concepts using
+                    embedded and AI-based approaches.
+                </p>
+
+                <div class="tags">
+                    <span>AI</span>
+                    <span>Radar</span>
+                    <span>Embedded</span>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EDUCATION
+     SATELLITE IMAGE DARK MODE ONLY
+========================================================= -->
+
+<section
+    id="education"
+    class="section image-section"
+>
+
+    <img
+        class="section-bg satellite-section-bg"
+        src="satelite.png"
+        alt=""
+        aria-hidden="true"
+    >
+
+
+    <div class="section-heading reveal">
+
+        <p class="eyebrow">EDUCATION</p>
+
+        <h2>
+            Engineering foundation with
+            interdisciplinary research interests.
+        </h2>
+
+    </div>
+
+
+    <div class="education-card interactive-card reveal">
+
+        <div class="education-logo">
+
+            <img
+                src="srm logo.jpg"
+                alt="SRM Institute of Science and Technology"
+            >
+
+        </div>
+
+
+        <div class="education-details">
+
+            <div class="education-main">
+
+                <span class="education-date">
+                    SEP 2022 — JUL 2026
+                </span>
+
+                <h3>
+                    B.Tech. Electronics &
+                    Instrumentation Engineering
+                </h3>
+
+                <h4>
+                    SRM Institute of Science and Technology
+                </h4>
+
+                <p>
+                    Kattankulathur, Tamil Nadu, India
+                </p>
+
+
+                <div class="coursework">
+
+                    <strong>
+                        Relevant Coursework
+                    </strong>
+
+                    <div class="tags">
+                        <span>Artificial Intelligence</span>
+                        <span>Python Programming</span>
+                        <span>Data Science</span>
+                        <span>Image Processing</span>
+                        <span>Physics: Electromagnetic theory, Quantum mechanics, waves and optics</span>
+                        <span>Engineering Graphics and Design</span>
+                        <span>Calculus & Linear algebra</span>
+                        <span>Advanced Calculus and Complex analysis</span>
+                        <span>Probability & Stochastic processes</span>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="education-result">
+
+                <span>GPA</span>
+
+                <strong>
+                    7.70 / 10
+                </strong>
+
+                <small>
+                    Dean's Scholarship Recipient
+                </small>
+
+            </div>
+
+        </div>
+        
+        
+   <div class="education-card interactive-card reveal">
+
+        </div>
+
+
+        <div class="education-details">
+
+            <div class="education-main">
+
+                <span class="education-date">
+                    Jun 2021 — Sep 2022
+                </span>
+
+                <h3>
+                    Higher Secondary Education
+                    Class XII
+                </h3>
+
+                <h4>
+                    Sri Vidhya Mandir Higher Secondary School
+                </h4>
+
+                <p>
+                    Thuraiyur, Tamil Nadu, India
+                </p>
+
+
+                <div class="coursework">
+
+                    <strong>
+                        Relevant Coursework
+                    </strong>
+
+                    <div class="tags">
+                        <span>Physics</span>
+                        <span>Chemistry</span>
+                        <span>Math</span>
+                        <span>Biology</span>
+                        
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="education-result">
+
+                <span>Percentile</span>
+
+                <strong>
+                    7.4 / 10
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section id="skills" class="section">
+
+    <div class="section-heading reveal">
+
+        <p class="eyebrow">SKILLS</p>
+
+        <h2>
+            Technical toolkit.
+        </h2>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <div class="skill-group interactive-card reveal">
+            <span class="skill-index">01</span>
+            <h3>Programming</h3>
+            <p>Python · C · C++ · R </p>
+            Programming for machine learning, scientific computing, data analysis, and engineering applications.
+        </div>
+
+        <div class="skill-group interactive-card reveal">
+            <span class="skill-index">02</span>
+            <h3>AI / Machine Learning</h3>
+            <p>
+                TensorFlow · PyTorch · scikit-learn
+                · CNNs · Deep Learning
+            </p>
+            Machine learning, deep learning, neural networks, and scientific AI.
+        </div>
+
+        <div class="skill-group interactive-card reveal">
+            <span class="skill-index">03</span>
+            <h3>Scientific Computing/ Data Analysis & Visualization</h3>
+            <p>
+                NumPy · Pandas · Matplotlib · MATLAB · Seaborn
+            </p>
+            Scientific data processing, statistical analysis, visualization, and exploratory data analysis.
+        </div>
+
+        <div class="skill-group interactive-card reveal">
+            <span class="skill-index">04</span>
+            <h3>Computer Vision</h3>
+            <p>
+                OpenCV · Image Processing · Grad-CAM
+                · CNNs
+            </p>
+            Image processing, visual learning, image classification, and model interpretation.
+        </div>
+
+        <div class="skill-group interactive-card reveal">
+            <span class="skill-index">05</span>
+            <h3>Quantum Computing</h3>
+            <p>
+                Qiskit · Cirq · PennyLane · QEC
+                · Kraus Operators · Quantum Noise
+            </p>
+            Quantum circuits, quantum simulation, quantum error correction, quantum channels, and quantum noise analysis.
+        </div>
+
+        <div class="skill-group interactive-card reveal">
+            <span class="skill-index">06</span>
+            <h3>Tools</h3>
+            <p>
+                Git · GitHub · Jupyter Notebook · IBM Quantum
+            </p>
+            Version control, research notebooks, computational experimentation, and quantum-computing platforms.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     AWARDS
+     ANTENNA IMAGE DARK MODE ONLY
+========================================================= -->
+
+<section
+    id="awards"
+    class="section image-section"
+>
+
+    <img
+        class="section-bg antenna-section-bg"
+        src="antenna.png"
+        alt=""
+        aria-hidden="true"
+    >
+
+
+    <div class="section-heading reveal">
+
+        <p class="eyebrow">
+            AWARDS & RECOGNITION
+        </p>
+
+        <h2>
+            Academic recognition.
+        </h2>
+
+    </div>
+
+
+    <div class="awards-grid">
+
+        <div class="award-card interactive-card reveal">
+
+            <div class="award-symbol">◆</div>
+
+            <div>
+                <span>ACADEMIC</span>
+
+                <h3>
+                    Dean's Scholarship Recipient
+                </h3>
+
+                <p>
+                    Academic scholarship recognition
+                    during undergraduate study.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="award-card interactive-card reveal">
+
+            <div class="award-symbol">◆</div>
+
+            <div>
+                <span>LEADERSHIP</span>
+
+                <h3>
+                    Student Representation
+                </h3>
+
+                <p>
+                    Served as class representative and
+                    supported student-faculty coordination.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact" class="section contact-section">
+
+    <div class="contact-attraction reveal">
+
+        <div class="contact-orbit contact-orbit-one"></div>
+        <div class="contact-orbit contact-orbit-two"></div>
+
+        <div class="contact-center">
+
+            <span class="contact-kicker">
+                LET'S CONNECT
+            </span>
+
+            <h2>
+                Research begins
+                <span>with a conversation.</span>
+            </h2>
+
+            <p>
+                Interested in AI, quantum information,
+                scientific computing, Physics,
+                or interdisciplinary research at their intersection?
+            </p>
+
+
+            <div class="contact-actions">
+
+                <!-- Replace the placeholder email with your actual email -->
+                <a
+                    href="mailto:your-email@example.com"
+                    class="contact-main-button"
+                >
+                    Start a Conversation
+                    <span>↗</span>
+                </a>
+
+                <a
+                    href="https://github.com/srikth"
+                    target="_blank"
+                    rel="noopener"
+                    class="contact-small-button"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://linkedin.com/in/srikanth-shanmugam-32b469252"
+                    target="_blank"
+                    rel="noopener"
+                    class="contact-small-button"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div>
+        © 2026 Srikanth Shanmugam
+    </div>
+
+    <div class="footer-tech">
+        AI · QIS · SCIENTIFIC COMPUTING · Physics
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>

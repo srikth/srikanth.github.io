@@ -1,278 +1,483 @@
+/* =========================================================
+   SRikANTH SHANMUGAM
+   PORTFOLIO JAVASCRIPT
+========================================================= */
+
 
 /* =========================================================
-   SRIKANTH SHANMUGAM — PORTFOLIO INTERACTIONS
-   Main JavaScript: script.js
-   ========================================================= */
+   THEME SYSTEM
+========================================================= */
 
-"use strict";
+const html = document.documentElement;
 
-document.body.classList.add("js-enabled");
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+const themeText = document.getElementById("themeText");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.documentElement;
+const THEME_KEY = "srikanth-theme";
 
-  // ---------- 1. Theme toggle ----------
 
-  const themeToggle = document.getElementById("themeToggle");
-  const themeIcon = document.getElementById("themeIcon");
+function getSavedTheme() {
 
-  function applyTheme(theme, save = true) {
-    const nextTheme = theme === "dark" ? "dark" : "light";
+    try {
 
-    root.dataset.theme = nextTheme;
+        const saved =
+            localStorage.getItem(THEME_KEY);
 
-    if (themeIcon) {
-      themeIcon.textContent = nextTheme === "dark" ? "☼" : "◐";
-    }
-
-    if (themeToggle) {
-      const label =
-        nextTheme === "dark"
-          ? "Switch to light theme"
-          : "Switch to dark theme";
-
-      themeToggle.setAttribute("aria-label", label);
-      themeToggle.setAttribute("title", label);
-    }
-
-    if (save) {
-      try {
-        localStorage.setItem("srikanth-theme", nextTheme);
-      } catch {
-        // Theme still works for the current page if storage is unavailable.
-      }
-    }
-  }
-
-  // The HTML may already have selected a saved or system theme.
-  applyTheme(root.dataset.theme || "light", false);
-
-  themeToggle?.addEventListener("click", () => {
-    const nextTheme =
-      root.dataset.theme === "dark" ? "light" : "dark";
-
-    applyTheme(nextTheme);
-  });
-
-  // ---------- 2. Mobile navigation ----------
-
-  const menuToggle = document.getElementById("menuToggle");
-  const mobileNav = document.getElementById("mobileNav");
-
-  function closeMobileMenu() {
-    if (!menuToggle || !mobileNav) return;
-
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation");
-    mobileNav.hidden = true;
-  }
-
-  function openMobileMenu() {
-    if (!menuToggle || !mobileNav) return;
-
-    menuToggle.setAttribute("aria-expanded", "true");
-    menuToggle.setAttribute("aria-label", "Close navigation");
-    mobileNav.hidden = false;
-  }
-
-  menuToggle?.addEventListener("click", () => {
-    const isOpen =
-      menuToggle.getAttribute("aria-expanded") === "true";
-
-    if (isOpen) {
-      closeMobileMenu();
-    } else {
-      openMobileMenu();
-    }
-  });
-
-  mobileNav?.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", closeMobileMenu);
-  });
-
-  // Close the menu if the user moves back to desktop layout.
-  const desktopQuery = window.matchMedia("(min-width: 821px)");
-
-  desktopQuery.addEventListener?.("change", (event) => {
-    if (event.matches) {
-      closeMobileMenu();
-    }
-  });
-
-  // ---------- 3. Scroll reveal ----------
-
-  const revealElements = document.querySelectorAll(".reveal");
-
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
-  if ("IntersectionObserver" in window && !reduceMotion) {
-    const revealObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.12,
-        rootMargin: "0px 0px -35px 0px"
-      }
-    );
-
-    revealElements.forEach((element) => {
-      revealObserver.observe(element);
-    });
-  } else {
-    // Ensure content remains visible on older browsers or
-    // devices where the visitor prefers reduced motion.
-    revealElements.forEach((element) => {
-      element.classList.add("is-visible");
-    });
-  }
-
-  // ---------- 4. Active navigation ----------
-
-  const sections = document.querySelectorAll("main section[id]");
-  const navLinks = document.querySelectorAll(
-    '.primary-nav a[href^="#"]'
-  );
-
-  function setActiveNavigation(id) {
-    navLinks.forEach((link) => {
-      const isActive = link.getAttribute("href") === `#${id}`;
-
-      if (isActive) {
-        link.classList.add("active");
-        link.setAttribute("aria-current", "location");
-      } else {
-        link.classList.remove("active");
-        link.removeAttribute("aria-current");
-      }
-    });
-  }
-
-  if ("IntersectionObserver" in window && sections.length) {
-    const sectionObserver = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort(
-            (a, b) =>
-              b.intersectionRatio - a.intersectionRatio
-          );
-
-        if (visibleEntries.length) {
-          setActiveNavigation(visibleEntries[0].target.id);
+        if (
+            saved === "dark" ||
+            saved === "light"
+        ) {
+            return saved;
         }
-      },
-      {
-        rootMargin: "-20% 0px -65% 0px",
-        threshold: [0, 0.1, 0.25, 0.5]
-      }
+
+        return "light";
+
+    } catch (error) {
+
+        return "light";
+
+    }
+
+}
+
+
+function saveTheme(theme) {
+
+    try {
+
+        localStorage.setItem(
+            THEME_KEY,
+            theme
+        );
+
+    } catch (error) {
+
+        /* Storage unavailable */
+
+    }
+
+}
+
+
+function setTheme(theme) {
+
+    html.setAttribute(
+        "data-theme",
+        theme
     );
 
-    sections.forEach((section) => {
-      sectionObserver.observe(section);
-    });
-  }
+    saveTheme(theme);
 
-  // ---------- 5. Keyboard shortcuts ----------
 
-  document.addEventListener("keydown", (event) => {
-    const target = event.target;
+    if (theme === "dark") {
 
-    const isTyping =
-      target instanceof HTMLElement &&
-      (
-        target.isContentEditable ||
-        ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName)
-      );
+        if (themeIcon) {
+            themeIcon.textContent = "☀";
+        }
 
-    if (
-      isTyping ||
-      event.ctrlKey ||
-      event.metaKey ||
-      event.altKey
-    ) {
-      return;
+        if (themeText) {
+            themeText.textContent = "LIGHT";
+        }
+
+        if (themeToggle) {
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to light theme"
+            );
+
+            themeToggle.setAttribute(
+                "title",
+                "Switch to professional light theme"
+            );
+
+        }
+
+    } else {
+
+        if (themeIcon) {
+            themeIcon.textContent = "☾";
+        }
+
+        if (themeText) {
+            themeText.textContent = "DARK";
+        }
+
+        if (themeToggle) {
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to dark theme"
+            );
+
+            themeToggle.setAttribute(
+                "title",
+                "Switch to technical dark theme"
+            );
+
+        }
+
     }
 
-    // Press T to toggle the colour theme.
-    if (event.key.toLowerCase() === "t") {
-      applyTheme(
-        root.dataset.theme === "dark" ? "light" : "dark"
-      );
+}
+
+
+/* Load saved theme */
+
+setTheme(
+    getSavedTheme()
+);
+
+
+/* Theme button */
+
+if (themeToggle) {
+
+    themeToggle.addEventListener(
+        "click",
+        () => {
+
+            const currentTheme =
+                html.getAttribute(
+                    "data-theme"
+                );
+
+            const nextTheme =
+                currentTheme === "dark"
+                    ? "light"
+                    : "dark";
+
+            setTheme(nextTheme);
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".reveal"
+    );
+
+
+if ("IntersectionObserver" in window) {
+
+    const revealObserver =
+        new IntersectionObserver(
+
+            (entries, observer) => {
+
+                entries.forEach(
+                    entry => {
+
+                        if (!entry.isIntersecting) {
+                            return;
+                        }
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+                );
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+    revealElements.forEach(
+        element => {
+
+            revealObserver.observe(
+                element
+            );
+
+        }
+    );
+
+} else {
+
+    revealElements.forEach(
+        element => {
+
+            element.classList.add(
+                "visible"
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+    document.querySelectorAll(
+        "main section[id]"
+    );
+
+const navLinks =
+    document.querySelectorAll(
+        ".nav-links a"
+    );
+
+
+if (
+    "IntersectionObserver" in window &&
+    sections.length &&
+    navLinks.length
+) {
+
+    const sectionObserver =
+        new IntersectionObserver(
+
+            entries => {
+
+                entries.forEach(
+                    entry => {
+
+                        if (!entry.isIntersecting) {
+                            return;
+                        }
+
+                        const currentId =
+                            entry.target.id;
+
+
+                        navLinks.forEach(
+                            link => {
+
+                                const href =
+                                    link.getAttribute(
+                                        "href"
+                                    );
+
+                                link.classList.toggle(
+                                    "active",
+                                    href ===
+                                    `#${currentId}`
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+            },
+
+            {
+                rootMargin:
+                    "-30% 0px -55% 0px",
+                threshold: 0
+            }
+
+        );
+
+
+    sections.forEach(
+        section => {
+
+            sectionObserver.observe(
+                section
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CARD INTERACTION
+========================================================= */
+
+const interactiveCards =
+    document.querySelectorAll(
+        ".interactive-card"
+    );
+
+
+interactiveCards.forEach(
+    card => {
+
+        card.addEventListener(
+            "pointermove",
+            event => {
+
+                if (
+                    window.innerWidth < 900
+                ) {
+                    return;
+                }
+
+                const rect =
+                    card.getBoundingClientRect();
+
+                const x =
+                    event.clientX -
+                    rect.left;
+
+                const y =
+                    event.clientY -
+                    rect.top;
+
+                const rotateX =
+                    ((y / rect.height) - 0.5) *
+                    -3;
+
+                const rotateY =
+                    ((x / rect.width) - 0.5) *
+                    3;
+
+
+                card.style.transform =
+                    `perspective(900px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)
+                     translateY(-4px)`;
+
+            }
+        );
+
+
+        card.addEventListener(
+            "pointerleave",
+            () => {
+
+                card.style.transform = "";
+
+            }
+        );
+
     }
+);
 
-    // Escape closes the mobile menu.
-    if (event.key === "Escape") {
-      closeMobileMenu();
+
+/* =========================================================
+   KEYBOARD THEME SHORTCUT
+   Press T to toggle theme
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        const tag =
+            document.activeElement?.tagName;
+
+        if (
+            tag === "INPUT" ||
+            tag === "TEXTAREA" ||
+            tag === "SELECT"
+        ) {
+            return;
+        }
+
+        if (
+            event.key.toLowerCase() === "t"
+        ) {
+
+            const currentTheme =
+                html.getAttribute(
+                    "data-theme"
+                );
+
+            setTheme(
+                currentTheme === "dark"
+                    ? "light"
+                    : "dark"
+            );
+
+        }
+
     }
-  });
+);
 
-  // ---------- 6. Close mobile navigation on outside click ----------
 
-  document.addEventListener("click", (event) => {
-    if (!menuToggle || !mobileNav || mobileNav.hidden) return;
+/* =========================================================
+   SMOOTH INTERNAL LINKS
+========================================================= */
 
-    const target = event.target;
+document.querySelectorAll(
+    'a[href^="#"]'
+).forEach(
+    link => {
 
-    if (!(target instanceof Node)) return;
+        link.addEventListener(
+            "click",
+            event => {
 
-    if (
-      !menuToggle.contains(target) &&
-      !mobileNav.contains(target)
-    ) {
-      closeMobileMenu();
+                const targetId =
+                    link.getAttribute(
+                        "href"
+                    );
+
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+                    return;
+                }
+
+                const target =
+                    document.querySelector(
+                        targetId
+                    );
+
+                if (!target) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+        );
+
     }
-  });
+);
 
-  // ---------- 7. Footer year ----------
 
-  const yearElement = document.getElementById("year");
+/* =========================================================
+   IMAGE ERROR HANDLING
+========================================================= */
 
-  if (yearElement) {
-    yearElement.textContent = String(new Date().getFullYear());
-  }
+document.querySelectorAll(
+    "img"
+).forEach(
+    image => {
 
-  // ---------- 8. Smooth internal links fallback ----------
+        image.addEventListener(
+            "error",
+            () => {
 
-  // CSS handles smooth scrolling in modern browsers. This
-  // fallback respects reduced-motion settings.
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const href = link.getAttribute("href");
+                image.style.opacity = "0";
 
-      if (!href || href === "#") return;
+            }
+        );
 
-      let destination;
-
-      try {
-        destination = document.querySelector(href);
-      } catch {
-        return;
-      }
-
-      if (!destination) return;
-
-      // Keep native anchor behaviour when reduced motion is enabled.
-      if (reduceMotion) return;
-
-      event.preventDefault();
-
-      destination.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-
-      // Update the URL hash without a second jump.
-      if (window.location.hash !== href) {
-        history.pushState(null, "", href);
-      }
-    });
-  });
-});
+    }
+);

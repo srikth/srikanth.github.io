@@ -1,0 +1,585 @@
+
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Srikanth Shanmugam — physicist in the making, computational scientist, and engineer exploring physics, quantum information, AI/ML, mathematics, and space systems.">
+  <meta property="og:title" content="Srikanth Shanmugam — Physics, Computation & Engineering">
+  <meta property="og:description" content="Exploring the physical world through mathematics, computation, and engineering.">
+  <meta property="og:type" content="website">
+
+  <title>Srikanth Shanmugam | Physics · Computation · Engineering</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    try {
+      const savedTheme = localStorage.getItem("srikanth-theme");
+      document.documentElement.dataset.theme =
+        savedTheme ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+    } catch {
+      document.documentElement.dataset.theme = "light";
+    }
+  </script>
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="wordmark" href="#home" aria-label="Srikanth Shanmugam home">
+        SS<span>.</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#toolkit">Toolkit</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="nav-cv" href="Srikanth_Shanmugam_CV.pdf" target="_blank" rel="noopener">
+          CV <span aria-hidden="true">↗</span>
+        </a>
+
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
+          <span id="themeIcon" aria-hidden="true">◐</span>
+          <span class="theme-label">Theme</span>
+        </button>
+
+        <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="Srikanth_Shanmugam_CV.pdf" target="_blank" rel="noopener">Curriculum vitae ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          PHYSICS · COMPUTATION · ENGINEERING
+        </p>
+
+        <h1 id="hero-title">
+          Intelligence across<br>
+          <em>machines &amp; matter.</em>
+        </h1>
+
+        <p class="hero-lede">
+          I want to understand the physical world through
+          <strong>physics, mathematics, and computation</strong>—and use
+          engineering to turn ideas into working systems.
+        </p>
+
+        <p class="hero-detail">
+          I'm Srikanth Shanmugam, an Electronics and Instrumentation Engineering
+          graduate building toward a future in physics research. My interests
+          span quantum information, scientific AI, computational methods,
+          electronics, and space systems.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#research">
+            Explore research <span aria-hidden="true">↓</span>
+          </a>
+          <a class="button button-secondary" href="#projects">Selected projects</a>
+          <a class="text-link" href="Srikanth_Shanmugam_CV.pdf" target="_blank" rel="noopener">
+            View CV ↗
+          </a>
+        </div>
+
+        <p class="hero-note">Curious by nature. Research-focused by intention.</p>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Abstract illustration of physical systems and computation">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+
+        <div class="visual-core">
+          <span>φ</span>
+          <small>PHYSICS<br>× COMPUTATION</small>
+        </div>
+
+        <span class="orbit-label label-top">MATHEMATICS</span>
+        <span class="orbit-label label-right">QUANTUM</span>
+        <span class="orbit-label label-bottom">ENGINEERING</span>
+        <span class="orbit-label label-left">AI / ML</span>
+
+        <span class="visual-cross cross-a">+</span>
+        <span class="visual-cross cross-b">×</span>
+        <span class="visual-cross cross-c">·</span>
+      </div>
+
+      <div class="hero-meta">
+        <span>BASED IN INDIA</span>
+        <span class="meta-line"></span>
+        <span>INDEPENDENT PROJECTS &amp; RESEARCH EXPERIENCE</span>
+      </div>
+    </section>
+
+    <!-- RESEARCH OUTLOOK -->
+    <section class="intro-band" aria-label="Research outlook">
+      <div class="section-wrap intro-band-inner">
+        <p class="eyebrow">A WORKING PHILOSOPHY</p>
+        <p class="band-statement">
+          Physics is my destination.
+          <span>Mathematics gives me language, computation gives me leverage,
+          and engineering keeps me close to reality.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section-wrap section-block" id="about" aria-labelledby="about-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2 id="about-title">
+          One scientific world.<br>
+          <em>Many ways to explore it.</em>
+        </h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-main reveal">
+          <p class="large-copy">
+            My long-term ambition is to become a <strong>physics researcher</strong>.
+            I'm especially drawn to questions where physical principles,
+            mathematical structure, and computational experiments meet.
+          </p>
+
+          <p>
+            My undergraduate training in Electronics and Instrumentation
+            Engineering gave me an engineering perspective on measurement,
+            electronics, sensors, and integrated systems. Outside that
+            foundation, I have pursued projects in quantum error correction,
+            quantum noise modeling, machine learning, and scientific data analysis.
+          </p>
+
+          <p>
+            I also enjoy exploring biology, chemistry, ecology, and other fields
+            where computation can help make sense of complex systems. I see
+            breadth as a source of questions; focused research is how I hope
+            to answer them.
+          </p>
+        </div>
+
+        <aside class="about-aside reveal">
+          <div class="aside-mark">“</div>
+          <p>
+            I don't want to choose between understanding nature and building
+            tools. I want to learn enough of both to do meaningful science.
+          </p>
+          <span class="mono-label">PERSONAL RESEARCH OUTLOOK</span>
+        </aside>
+      </div>
+    </section>
+
+    <!-- RESEARCH DIRECTIONS -->
+    <section class="research-section" id="research" aria-labelledby="research-title">
+      <div class="section-wrap section-block">
+        <div class="section-heading reveal">
+          <p class="eyebrow">02 / RESEARCH DIRECTIONS</p>
+          <h2 id="research-title">
+            Questions that pull<br>
+            <em>me forward.</em>
+          </h2>
+          <p class="section-intro">
+            These are evolving interests, not claims of expertise in every area.
+            I hope to sharpen them through deeper study, research collaboration,
+            and reproducible work.
+          </p>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card reveal">
+            <span class="card-index">A / 01</span>
+            <div class="research-symbol symbol-physics">∇²</div>
+            <h3>Physics &amp; mathematics</h3>
+            <p>
+              Quantum mechanics, electromagnetism, thermodynamics, astrophysics,
+              and the mathematical tools used to describe physical systems.
+            </p>
+            <div class="chip-row">
+              <span>Physical theory</span>
+              <span>Linear algebra</span>
+              <span>Differential equations</span>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <span class="card-index">A / 02</span>
+            <div class="research-symbol symbol-quantum">|ψ⟩</div>
+            <h3>Quantum information</h3>
+            <p>
+              Quantum error correction, quantum noise and channels, quantum
+              communication, and computational approaches to reliable quantum systems.
+            </p>
+            <div class="chip-row">
+              <span>QEC</span>
+              <span>Noise models</span>
+              <span>Quantum algorithms</span>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <span class="card-index">A / 03</span>
+            <div class="research-symbol symbol-ai">ƒ(x)</div>
+            <h3>AI &amp; scientific computing</h3>
+            <p>
+              Machine learning, numerical experiments, data-driven modeling,
+              and algorithms that support investigation across scientific domains.
+            </p>
+            <div class="chip-row">
+              <span>ML / DL</span>
+              <span>Simulation</span>
+              <span>Scientific data</span>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <span class="card-index">A / 04</span>
+            <div class="research-symbol symbol-engineering">⌁</div>
+            <h3>Electronics &amp; space systems</h3>
+            <p>
+              Instrumentation, sensing, embedded systems, satellites, and the
+              engineering foundations behind complex aerospace systems.
+            </p>
+            <div class="chip-row">
+              <span>Electronics</span>
+              <span>Embedded systems</span>
+              <span>Space technology</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section-wrap section-block" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading section-heading-row reveal">
+        <div>
+          <p class="eyebrow">03 / SELECTED WORK</p>
+          <h2 id="projects-title">
+            Projects as a way<br>
+            <em>of asking questions.</em>
+          </h2>
+        </div>
+        <p class="section-intro">
+          A selection of computational, AI, and engineering projects. Each
+          project page should document the question, method, evidence, and
+          limitations—not just the tools used.
+        </p>
+      </div>
+
+      <div class="project-list">
+        <article class="project-row reveal">
+          <div class="project-number">01</div>
+          <div class="project-body">
+            <div class="project-topline">
+              <span class="project-type">QUANTUM INFORMATION</span>
+              <span class="project-year">SIMULATION PROJECT</span>
+            </div>
+            <h3>Quantum Error Correction for Deep-Space Communication</h3>
+            <p>
+              Explores quantum error-correction concepts for communication under
+              modeled noise and decoherence. The work provides a starting point
+              for investigating how encoded quantum information behaves under
+              different channel assumptions.
+            </p>
+            <div class="tag-list">
+              <span>Python</span><span>Qiskit</span><span>NumPy</span><span>Noise modeling</span>
+            </div>
+            <a class="project-link" href="https://github.com/srikth/-Quantum-Error-Correction-for-Deep-Space-Communication" target="_blank" rel="noopener">
+              View repository <span>↗</span>
+            </a>
+          </div>
+          <div class="project-aside">
+            <span class="mini-equation">ρ → 𝓔(ρ)</span>
+            <span class="aside-caption">Quantum channels<br>&amp; encoded states</span>
+          </div>
+        </article>
+
+        <article class="project-row reveal">
+          <div class="project-number">02</div>
+          <div class="project-body">
+            <div class="project-topline">
+              <span class="project-type">QUANTUM / MACHINE LEARNING</span>
+              <span class="project-year">MODEL EXPLORATION</span>
+            </div>
+            <h3>Quantum Noise Parameter Learning</h3>
+            <p>
+              Investigates learning parameters associated with modeled quantum
+              noise using quantum-channel concepts and machine-learning methods.
+              The project can be strengthened with explicit baselines,
+              parameter-recovery error, and reproducible training curves.
+            </p>
+            <div class="tag-list">
+              <span>Python</span><span>Qiskit</span><span>PyTorch</span><span>Kraus operators</span>
+            </div>
+            <a class="project-link" href="https://github.com/srikth/Quantum-Error-Correction-Simulaton-using-Qiskit" target="_blank" rel="noopener">
+              View related repository <span>↗</span>
+            </a>
+          </div>
+          <div class="project-aside">
+            <span class="mini-equation">𝓔(ρ; θ)</span>
+            <span class="aside-caption">Modeling a channel<br>with parameters θ</span>
+          </div>
+        </article>
+
+        <article class="project-row reveal">
+          <div class="project-number">03</div>
+          <div class="project-body">
+            <div class="project-topline">
+              <span class="project-type">SCIENTIFIC MACHINE LEARNING</span>
+              <span class="project-year">COMPUTER VISION</span>
+            </div>
+            <h3>CNN Galaxy Morphology Classification</h3>
+            <p>
+              Uses convolutional neural networks to explore image-based
+              classification in astronomy. A strong case study should document
+              the dataset, class balance, train/validation/test split, metrics,
+              and examples of model errors.
+            </p>
+            <div class="tag-list">
+              <span>Python</span><span>CNN</span><span>Computer vision</span><span>Astronomy data</span>
+            </div>
+            <a class="project-link" href="https://github.com/srikth" target="_blank" rel="noopener">
+              Explore GitHub projects <span>↗</span>
+            </a>
+          </div>
+          <div class="project-aside">
+            <span class="mini-equation">image → class</span>
+            <span class="aside-caption">Learning patterns<br>from scientific images</span>
+          </div>
+        </article>
+
+        <article class="project-row reveal">
+          <div class="project-number">04</div>
+          <div class="project-body">
+            <div class="project-topline">
+              <span class="project-type">ELECTRONICS / EMBEDDED SYSTEMS</span>
+              <span class="project-year">ENGINEERING PROJECT</span>
+            </div>
+            <h3>Smart Weather Station &amp; Sensor Fusion</h3>
+            <p>
+              An embedded environmental-monitoring project involving sensor
+              acquisition and connected visualization. This work represents
+              the measurement-and-systems side of my engineering background.
+            </p>
+            <div class="tag-list">
+              <span>ESP32</span><span>Sensors</span><span>Time series</span><span>IoT</span>
+            </div>
+            <a class="project-link" href="https://github.com/srikth" target="_blank" rel="noopener">
+              Explore GitHub projects <span>↗</span>
+            </a>
+          </div>
+          <div class="project-aside">
+            <span class="mini-equation">sensor → data</span>
+            <span class="aside-caption">Measurement<br>&amp; interpretation</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="integrity-note">
+        <strong>Research note:</strong> Descriptions are intentionally cautious.
+        Add quantitative results, figures, collaborators, and publication details
+        only when you can verify them from your actual project work.
+      </p>
+
+      <div class="more-projects reveal">
+        <span class="mono-label">MORE EXPLORATIONS</span>
+        <p>
+          Facial emotion recognition · Protein structure prediction · Species
+          distribution modeling · AI radar control · Autonomous grass mower
+        </p>
+        <a class="text-link" href="https://github.com/srikth" target="_blank" rel="noopener">
+          Browse all repositories ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- TOOLKIT -->
+    <section class="toolkit-section" id="toolkit" aria-labelledby="toolkit-title">
+      <div class="section-wrap section-block">
+        <div class="section-heading reveal">
+          <p class="eyebrow">04 / METHODS &amp; TOOLS</p>
+          <h2 id="toolkit-title">
+            Tools in service<br>
+            <em>of the question.</em>
+          </h2>
+        </div>
+
+        <div class="toolkit-grid">
+          <div class="toolkit-item reveal">
+            <span class="toolkit-index">01</span>
+            <h3>Programming &amp; data</h3>
+            <p>Python · C/C++ · NumPy · Pandas · Matplotlib · Jupyter</p>
+          </div>
+
+          <div class="toolkit-item reveal">
+            <span class="toolkit-index">02</span>
+            <h3>AI &amp; machine learning</h3>
+            <p>PyTorch · TensorFlow · scikit-learn · CNNs · Computer vision</p>
+          </div>
+
+          <div class="toolkit-item reveal">
+            <span class="toolkit-index">03</span>
+            <h3>Quantum computing</h3>
+            <p>Qiskit · Cirq · PennyLane · Quantum circuits · Noise simulation</p>
+          </div>
+
+          <div class="toolkit-item reveal">
+            <span class="toolkit-index">04</span>
+            <h3>Engineering systems</h3>
+            <p>Electronics · Instrumentation · ESP32 · Sensors · Embedded systems</p>
+          </div>
+
+          <div class="toolkit-item reveal">
+            <span class="toolkit-index">05</span>
+            <h3>Mathematical foundations</h3>
+            <p>Calculus · Linear algebra · Probability · Complex analysis · Numerical methods</p>
+          </div>
+
+          <div class="toolkit-item reveal">
+            <span class="toolkit-index">06</span>
+            <h3>Research workflow</h3>
+            <p>Git · GitHub · Technical writing · Visualization · Reproducible experiments</p>
+          </div>
+        </div>
+
+        <p class="integrity-note">
+          This is a skills overview, not a proficiency ranking. Keep only tools
+          and topics you can discuss confidently, and indicate depth through
+          the projects where you used them.
+        </p>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section-wrap section-block" id="education" aria-labelledby="education-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">05 / EDUCATION</p>
+        <h2 id="education-title">
+          Engineering foundation.<br>
+          <em>Physics-oriented future.</em>
+        </h2>
+      </div>
+
+      <div class="education-card reveal">
+        <div class="education-date">2022 — 2026</div>
+
+        <div class="education-content">
+          <h3>B.Tech, Electronics and Instrumentation Engineering</h3>
+          <p class="education-school">
+            SRM Institute of Science and Technology · Kattankulathur, India
+          </p>
+          <p>GPA: 7.70 / 10</p>
+          <p>
+            Relevant foundations include electronics and instrumentation,
+            programming, AI/data science, image processing, calculus and linear
+            algebra, probability, and undergraduate physics topics including
+            quantum mechanics, electromagnetism, and thermodynamics.
+          </p>
+          <span class="education-note">
+            Degree and course details should match your official transcript and certificates.
+          </span>
+        </div>
+      </div>
+
+      <div class="future-note reveal">
+        <span class="mono-label">WHAT COMES NEXT</span>
+        <p>
+          Build deeper foundations in physics and mathematics, pursue research
+          experiences, and identify doctoral programs whose expectations align
+          with my preparation and evolving research questions.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-wrap contact-inner">
+        <div class="reveal">
+          <p class="eyebrow">06 / CONTACT</p>
+          <h2 id="contact-title">
+            Good science begins<br>
+            <em>with a question.</em>
+          </h2>
+          <p class="contact-copy">
+            I'm interested in research conversations, collaboration, and
+            opportunities to grow as a computational scientist and future physicist.
+          </p>
+        </div>
+
+        <div class="contact-links reveal">
+          <!-- Replace the placeholder email before publishing. -->
+          <a class="contact-link" href="mailto:YOUR_EMAIL@example.com">
+            <span>Email</span>
+            <strong>YOUR_EMAIL@example.com</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="contact-link" href="https://github.com/srikth" target="_blank" rel="noopener">
+            <span>GitHub</span>
+            <strong>github.com/srikth</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <!-- Replace this URL with your own LinkedIn profile. -->
+          <a class="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+            <span>LinkedIn</span>
+            <strong>Professional profile</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="contact-link" href="Srikanth_Shanmugam_CV.pdf" target="_blank" rel="noopener">
+            <span>Curriculum vitae</span>
+            <strong>View PDF</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="section-wrap footer-inner">
+      <a class="wordmark" href="#home">SS<span>.</span></a>
+      <p>Built around curiosity, evidence, and the physical world.</p>
+      <span class="footer-copy">© <span id="year"></span> Srikanth Shanmugam</span>
+      <a class="back-top" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
